@@ -14,4 +14,10 @@ class Line:
         Returns:
             float or int: distance.
         """
-        pass
+        distance = math.sqrt((self.x2 - self.x1)**2 + (self.y2 - self.y1)**2)
+        return distance
+    x1, y1 = 1, 2
+    x2, y2 = 4, 6
+    my_line = Line(x1, y1, x2, y2)
+    length = my_line.get_length()
+    print(f"Length of the line: {length}")
